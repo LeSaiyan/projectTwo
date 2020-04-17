@@ -1,6 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-const Product = ({ data }) => {}
+const products = ({ data }) => <p>oui</p>
 
-export default Product
+export default products
