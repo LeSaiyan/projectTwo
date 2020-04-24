@@ -1,0 +1,7 @@
+// const fetch ||axios
+
+MAILCHIMP:
+    - GATSBY_MAILCHIMP_API
+    - MAILCHIMP ID LIST
+
+    STRIPE: STRIPE_API

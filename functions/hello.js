@@ -1,8 +1,5 @@
 exports.handler = function (event, context, callback) {
   console.log("yeeeeeeeeees")
-
-  console.log("queryStringParameters", event.queryStringParameters)
-
   callback(null, {
     statusCode: 200,
     body: JSON.stringify("Hello !"),
