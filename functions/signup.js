@@ -27,7 +27,7 @@ exports.handler = (event, context, callback) => {
       },
       {
         auth: {
-          username: "bast@gmail.com",
+          username: "LeSaiyan",
           password: process.env.API_KEY,
         },
       }
