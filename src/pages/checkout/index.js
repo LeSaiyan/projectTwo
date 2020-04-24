@@ -2,7 +2,7 @@ import React from "react"
 import { loadStripe } from "@stripe/stripe-js"
 
 const Index = () => {
-  const stripe = loadStripe("pk_test_tT0WmGjmBsEhSCMihpSjmqH400njt8c3xJ")
+  const stripePromise = loadStripe("pk_test_tT0WmGjmBsEhSCMihpSjmqH400njt8c3xJ")
 
   const checkoutButton = async e => {
     e.preventDefault()
