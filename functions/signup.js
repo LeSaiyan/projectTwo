@@ -22,7 +22,7 @@ exports.handler = (event, context, callback) => {
     .post(
       "https://us8.api.mailchimp.com/3.0/lists/a88a05506e/members",
       {
-        email_address: event.queryStringParameters.mail,
+        email_address: "yo@yo.fr",
         status: "subscribed",
       },
       {
