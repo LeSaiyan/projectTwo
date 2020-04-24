@@ -10,8 +10,8 @@ const Index = () => {
     stripe
       .redirectToCheckout({
         items: [{ sku: "sku_H9mSvNsxyF6iLS", quantity: 1 }],
-        successUrl: "https://your-website.com/success",
-        cancelUrl: "https://your-website.com/canceled",
+        successUrl: "https://localhost:8000/checkout/success",
+        cancelUrl: "https://localhost:8000/checkout/cancel",
       })
       .then(function (result) {})
   }
