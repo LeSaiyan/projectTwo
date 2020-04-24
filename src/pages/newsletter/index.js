@@ -18,6 +18,7 @@ const Index = () => {
     axios
       .post(
         `https://keen-yonath-4ea4f5.netlify.app/.netlify/functions/signup`,
+        inputForm,
         {
           headers: {
             "Content-Type": "application-json",
