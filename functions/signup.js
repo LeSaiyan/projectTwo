@@ -15,33 +15,42 @@ const axios = require("axios")
 const fetch = require("fetch")
 const dotenv = require("dotenv")
 
-const mailchimpApi = process.env.GATSBY_API_ENDPOINT
+module.exports.handler = (event, context, callback) => {
+  const mailchimpApi = "68f96fa2a81988b7fe0115cfb532b6fe-us8"
+  const memberListId = "a88a05506e"
 
-exports.handler = (event, context, callback) => {
+  const formData = JSON.parse(event.body)
+
+  const data = {
+    email_address: formData.email,
+    status: "subscribed",
+  }
+
   axios
     .post(
-      "https://us8.api.mailchimp.com/3.0/lists/a88a05506e/members",
+      `https://us8.api.mailchimp.com/3.0/lists/${memberListId}/members`,
+      data,
       {
-        email_address: "yo@yo.fr",
-        status: "subscribed",
-      },
-      {
-        auth: {
-          username: "LeSaiyan",
-          password: process.env.API_KEY,
+        headers: {
+          "Content-Type": "application-json",
+          Authorization: `apikey ${mailchimpApi}`,
         },
       }
     )
-    .then(
+    .then(res => {
       callback(null, {
         statusCode: 200,
-        body: JSON.stringify("Add may be"),
-      }).catch(error => {
-        console.log(error)
-        callback(null, {
-          statusCode: 400,
-          body: "erreur" + error.message,
-        })
+        body: JSON.stringify({
+          status: "Members successfully subscribed",
+        }),
       })
-    )
+    })
+    .catch(error => {
+      callback(null, {
+        statusCode: err.status,
+        body: JSON.stringify({
+          error: err,
+        }),
+      })
+    })
 }
