@@ -8,27 +8,27 @@
 
 exports.createPages = async ({ actions, graphql }) => {
   const products = await graphql(`
-        query {
-            allMarkdownRemark {
-                edges {
-                  node {
-                    frontmatter {
-                      path
-                    }
-                  }
-                }
-              }
+    query {
+      allMarkdownRemark {
+        edges {
+          node {
+            frontmatter {
+              path
             }
-            
+          }
         }
-    `)
+      }
+    }
+  `)
 
-  products.data.allMarkDownRemark.edges.forEach(edge => {
+  products.data.allMarkdownRemark.edges.forEach(edge => {
     const path = edge.node.frontmatter.path
     actions.createPage({
       path: path,
       component: require.resolve("./src/templates/productTemplate.js"),
-      context: { path: path },
+      context: {
+        path: path,
+      },
     })
   })
 }
