@@ -18,7 +18,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-netlify-identity`,
       options: {
-        url: `https://your-identity-instance-here.netlify.com/`, // required!
+        url: `https://5eaaaf17517ddb0007b47a20--keen-yonath-4ea4f5.netlify.app/`, // required!
       },
     },
     {
