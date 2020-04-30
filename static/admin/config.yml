@@ -22,3 +22,39 @@ collections:
       - { name: image, required: true, label: Image, widget: image }
       - { name: sku, required: false, label: Sku }
       - { name: path, required: false, label: Path }
+  - name: blog
+    label: Articles
+    folder: articles
+    create: true
+    fields:
+      - { name: title, required: true, label: Titre }
+      - {
+          name: description,
+          required: true,
+          label: Description,
+          widget: markdown,
+        }
+      - { name: image, required: true, label: Image, widget: image }
+      - { name: path, required: false, label: Path }
+  - name: page
+    label: Pages
+    folder: pages
+    create: true
+    fields:
+      - { name: title, required: true, label: Titre }
+      - {
+          name: description,
+          required: true,
+          label: Description,
+          widget: markdown,
+        }
+      - { name: image, required: true, label: Image, widget: image }
+      - { name: path, required: false, label: Path }
+      - {
+          name: type,
+          required: true,
+          label: Type,
+          widget: "list",
+          allow_add: false,
+          default: ["about page", "custom page"],
+        }
