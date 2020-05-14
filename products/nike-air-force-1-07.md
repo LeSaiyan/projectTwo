@@ -6,4 +6,5 @@ description: "La Nike Air Force 1 ’07 est une silhouette emblématique du
   impeccable, les couleurs vives et juste ce qu’il faut d’éclat pour vous faire
   briller."
 image: /assets/chaussure-air-force-1-07-pour-3ngnlt.jpg
+path: air-force-1
 ---
