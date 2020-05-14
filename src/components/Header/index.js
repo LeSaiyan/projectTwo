@@ -5,6 +5,8 @@ import IdentityModal, {
   useIdentityContext,
 } from "react-netlify-identity-widget"
 import "react-netlify-identity-widget/styles.css" // delete if you want to bring your own CSS
+import HomeLogo from "../../assets/images/travel.png"
+import "./header.scss"
 
 const Header = () => {
   const identity = useIdentityContext()
@@ -27,11 +29,25 @@ const Header = () => {
         <nav className="header__nav">
           <ul className="nav__list">
             <li className="nav__item">
-              <Link to="/products">Eshop</Link>
+              <Link to="/">
+                <img className="logo" src={HomeLogo} />
+              </Link>
             </li>
-            <li className="nav__item">
-              <Link to="/about">About</Link>
-            </li>
+            <Link to="/products">
+              <li className="nav__item">Eshop</li>
+            </Link>
+            <Link to="/contact">
+              <li className="nav__item">Contact</li>
+            </Link>
+            <Link to="/blog">
+              <li className="nav__item">Blog</li>
+            </Link>
+            <Link to="/user">
+              <li className="nav__item">User</li>
+            </Link>
+            <Link to="/cart">
+              <li className="nav__item">Cart</li>
+            </Link>
           </ul>
         </nav>
         <div className="toolbar">
