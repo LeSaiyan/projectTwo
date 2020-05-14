@@ -6,4 +6,5 @@ description: Les années 90 font leur grand retour avec la toute nouvelle
   avec des détails modernes offrant à cette chaussure légère et confortable un
   look incomparable.
 image: /assets/chaussure-air-heights-pour-58skmx.jpg
+path: nike-air-heights
 ---
