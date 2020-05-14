@@ -2,6 +2,8 @@ import React, { Component } from "react"
 import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
+import { Link } from "gatsby"
+
 export const query = graphql`
   query MyQuery {
     allMarkdownRemark {
@@ -12,6 +14,7 @@ export const query = graphql`
             image
             price
             title
+            path
           }
         }
       }
@@ -30,6 +33,8 @@ const Products = ({ data }) => {
           <th>Preview</th>
         </tr>
         {data.allMarkdownRemark.edges.map(product => {
+          console.log(product)
+
           return (
             <tr>
               <td>{product.node.frontmatter.title}</td>
@@ -37,6 +42,9 @@ const Products = ({ data }) => {
               <td>{product.node.frontmatter.description}</td>
               <td>
                 <img src={product.node.frontmatter.image} alt="" />
+              </td>
+              <td>
+                <Link to={"/" + product.node.frontmatter.path}>Détails</Link>
               </td>
             </tr>
           )
