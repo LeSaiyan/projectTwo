@@ -46,12 +46,12 @@ const Products = ({ data }) => {
               <td>
                 <button
                   class="snipcart-add-item"
-                  data-item-id="starry-night"
-                  data-item-price="79.99"
+                  data-item-id={product.node.frontmatter.title}
+                  data-item-price={product.node.frontmatter.price}
                   data-item-url="https://keen-yonath-4ea4f5.netlify.app/products"
-                  data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
+                  data-item-description={product.node.frontmatter.description}
                   data-item-image={product.node.frontmatter.image}
-                  data-item-name="The Starry Night"
+                  data-item-name={product.node.frontmatter.title}
                 >
                   Add to cart
                 </button>
