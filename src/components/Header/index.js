@@ -55,16 +55,18 @@ const Header = () => {
             <Link to="/user">
               <li className="nav__item">User</li>
             </Link>
-            <Link to="/cart">
-              <li className="nav__item">Cart</li>
-            </Link>
+            <button className="btn" onClick={() => setDialog(true)}>
+              {isLoggedIn ? (
+                <Link to="/cart">
+                  <li className="nav__item">Cart</li>
+                </Link>
+              ) : (
+                "LOG IN"
+              )}
+            </button>
           </ul>
         </nav>
-        <div className="toolbar">
-          <button className="btn" onClick={() => setDialog(true)}>
-            {isLoggedIn ? `Hello ${name}, Log out here!` : "LOG IN"}
-          </button>
-        </div>
+        <div className="toolbar"></div>
       </header>
       <IdentityModal
         showDialog={dialog}
