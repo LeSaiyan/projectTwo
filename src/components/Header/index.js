@@ -56,13 +56,11 @@ const Header = () => {
               <li className="nav__item">User</li>
             </Link>
             <Link to="/cart">
-              <li className="nav__item">
-                <button data-item-url="https://keen-yonath-4ea4f5.netlify.app/products">
-                  oui
-                </button>
-                Cart
-              </li>
+              <li className="nav__item">Cart</li>
             </Link>
+            <button data-item-url="https://keen-yonath-4ea4f5.netlify.app/products">
+              oui
+            </button>
           </ul>
         </nav>
         <div className="toolbar">
