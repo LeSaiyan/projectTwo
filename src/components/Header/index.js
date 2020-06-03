@@ -26,6 +26,16 @@ const Header = () => {
   return (
     <div>
       <header>
+        <link
+          rel="stylesheet"
+          href="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.css"
+        />
+        <div
+          id="snipcart"
+          data-api-key="NWI2MThmM2UtNWJlNy00ZjQxLWE4ZWQtYWUwNjkwMjk5YmQzNjM3MjY3OTQwMzIwNDYxNzgw"
+          hidden
+        ></div>
+        <script src="https://cdn.snipcart.com/themes/v3.0.14/default/snipcart.js"></script>
         <nav className="header__nav">
           <ul className="nav__list">
             <li className="nav__item">
