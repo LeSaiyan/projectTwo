@@ -48,7 +48,7 @@ const Products = ({ data }) => {
                   class="snipcart-add-item"
                   data-item-id="starry-night"
                   data-item-price="79.99"
-                  data-item-url="/"
+                  data-item-url="https://keen-yonath-4ea4f5.netlify.app/products"
                   data-item-description="High-quality replica of The Starry Night by the Dutch post-impressionist painter Vincent van Gogh."
                   data-item-image={product.node.frontmatter.image}
                   data-item-name="The Starry Night"
