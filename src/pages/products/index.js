@@ -46,7 +46,7 @@ const Products = ({ data }) => {
               <td>
                 <button
                   class="snipcart-add-item"
-                  data-item-id={product.node.frontmatter.title}
+                  data-item-id="starry-night"
                   data-item-price={product.node.frontmatter.price}
                   data-item-url="https://keen-yonath-4ea4f5.netlify.app/products"
                   data-item-description={product.node.frontmatter.description}
