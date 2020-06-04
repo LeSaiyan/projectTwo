@@ -62,11 +62,9 @@ const Header = () => {
             ) : null}
 
             <li>
-              <button className="header__checkout snipcart-checkout">
-                oui
-              </button>
-              <span className="snipcart-total-price">$0.00</span>(
-              <span className="snipcart-items-count">0</span>)
+              <button class="header__checkout snipcart-checkout">oui</button>
+              <span class="snipcart-total-price">$0.00</span>(
+              <span class="snipcart-items-count">0</span>)
             </li>
           </ul>
         </nav>
