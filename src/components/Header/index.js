@@ -60,6 +60,14 @@ const Header = () => {
                 <li className="nav__item">Cart</li>
               </Link>
             ) : null}
+
+            <li>
+              <button className="header__checkout snipcart-checkout">
+                oui
+              </button>
+              <span className="snipcart-total-price">$0.00</span>(
+              <span className="snipcart-items-count">0</span>)
+            </li>
           </ul>
         </nav>
         <div className="toolbar">
