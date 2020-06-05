@@ -13,7 +13,9 @@ const Header = () => {
   //state local
   const [dialog, setDialog] = React.useState(false)
 
-  console.log(identity)
+  console.log(identity.user.user_metadata)
+  console.log(identity.user)
+  console.log(identity.user.user_metadata.name)
 
   const isLoggedIn = identity && identity.isLoggedIn
   const name =
