@@ -56,16 +56,12 @@ const Header = () => {
               <li className="nav__item">User</li>
             </Link>
             {isLoggedIn ? (
-              <Link to="/cart">
-                <li className="nav__item">Cart</li>
-              </Link>
+              <li>
+                <button class="header__checkout snipcart-checkout">oui</button>
+                <span class="snipcart-total-price">$0.00</span>(
+                <span class="snipcart-items-count">0</span>)
+              </li>
             ) : null}
-
-            <li>
-              <button class="header__checkout snipcart-checkout">oui</button>
-              <span class="snipcart-total-price">$0.00</span>(
-              <span class="snipcart-items-count">0</span>)
-            </li>
           </ul>
         </nav>
         <div className="toolbar">
