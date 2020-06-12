@@ -1,6 +1,6 @@
 ---
 title: adadada ad
 description: advyaldiub makbdabdl adm bmadm au dmha mdua md
-image: /assets/chaussure-air-heights-pour-58skmx.jpg
+image: /assets/black_9734_star_3285.jpg
 path: article-3
 ---
