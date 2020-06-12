@@ -27,11 +27,6 @@ export const query = graphql`
 
 const Products = ({ data }) => {
   const identity = useIdentityContext()
-  //state local
-  const [dialog, setDialog] = React.useState(false)
-
-  console.log(identity.user)
-
   const isLoggedIn = identity && identity.isLoggedIn
   return (
     <Layout>
@@ -52,17 +47,20 @@ const Products = ({ data }) => {
                 <img src={product.node.frontmatter.image} alt="" />
               </td>
               <td>
-                <button
-                  class="snipcart-add-item"
-                  data-item-id={product.node.frontmatter.title}
-                  data-item-price={product.node.frontmatter.price}
-                  data-item-url="https://keen-yonath-4ea4f5.netlify.app/products"
-                  data-item-description={product.node.frontmatter.description}
-                  data-item-image={product.node.frontmatter.image}
-                  data-item-name={product.node.frontmatter.title}
-                >
-                  Add to cart
-                </button>
+                {isLoggedIn ? (
+                  <button
+                    class="snipcart-add-item"
+                    data-item-id={product.node.frontmatter.title}
+                    data-item-price={product.node.frontmatter.price}
+                    data-item-url="https://keen-yonath-4ea4f5.netlify.app/products"
+                    data-item-description={product.node.frontmatter.description}
+                    data-item-image={product.node.frontmatter.image}
+                    data-item-name={product.node.frontmatter.title}
+                  >
+                    Add to cart
+                  </button>
+                ) : null}
+
                 <Link to={"/" + product.node.frontmatter.path}>Détails</Link>
               </td>
             </tr>
