@@ -6,7 +6,6 @@ const index = props => {
     <div>
       <Header />
       <main>{props.children}</main>
-      <Footer />
     </div>
   )
 }

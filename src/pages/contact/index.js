@@ -5,6 +5,9 @@ import Layout from "../../components/Layout"
 const Contact = () => {
   return (
     <Layout>
+      <p>
+        Vous pouvez ici nous envoyer un mail si vous souhaitez un renseignement.
+      </p>
       <form
         name="contact"
         method="post"

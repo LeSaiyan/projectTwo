@@ -25,15 +25,6 @@ export default ({ data }) => {
   )
 }
 
-// export const query = graphql`
-//   query($path: String!) {
-//     markdownRemark(frontmatter: { path: { eq: $path } }) {
-//       frontmatter {
-//         title
-//       }
-//     }
-//   }
-// `
 export const query = graphql`
   query($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
