@@ -6,7 +6,7 @@ import { Link } from "gatsby"
 
 export const query = graphql`
   query MyQuery {
-    allMarkdownRemark {
+    allMarkdownRemark(filter: { fileAbsolutePath: { regex: "//products/" } }) {
       edges {
         node {
           frontmatter {
@@ -34,6 +34,7 @@ const Products = ({ data }) => {
         </tr>
         {data.allMarkdownRemark.edges.map(product => {
           console.log(product)
+          console.log(product.node.frontmatter.path)
 
           return (
             <tr>
