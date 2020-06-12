@@ -7,6 +7,7 @@ import IdentityModal, {
 import "react-netlify-identity-widget/styles.css" // delete if you want to bring your own CSS
 import HomeLogo from "../../assets/images/travel.png"
 import "./header.scss"
+import cartLogo from "../../images/cart.png"
 
 const Header = () => {
   const identity = useIdentityContext()
@@ -55,7 +56,9 @@ const Header = () => {
             </Link>
             {isLoggedIn ? (
               <li>
-                <button class="header__checkout snipcart-checkout">oui</button>
+                <button class="header__checkout snipcart-checkout">
+                  Panier
+                </button>
                 <span class="snipcart-total-price">$0.00</span>(
                 <span class="snipcart-items-count">0</span>)
               </li>
