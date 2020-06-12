@@ -13,8 +13,6 @@ const Header = () => {
   //state local
   const [dialog, setDialog] = React.useState(false)
 
-  console.log(identity.user)
-
   const isLoggedIn = identity && identity.isLoggedIn
   const name =
     (identity &&

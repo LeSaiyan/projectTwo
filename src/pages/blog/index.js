@@ -29,8 +29,6 @@ const Blog = ({ data }) => {
           <th>Preview</th>
         </tr>
         {data.allMarkdownRemark.edges.map(article => {
-          console.log(article)
-
           return (
             <tr>
               <td>{article.node.frontmatter.title}</td>

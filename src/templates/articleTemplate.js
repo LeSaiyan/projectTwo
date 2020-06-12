@@ -11,8 +11,6 @@ import Layout from "../components/Layout"
 // }
 
 export default ({ data }) => {
-  console.log(data.markdownRemark.frontmatter)
-
   return (
     <Layout>
       <div>

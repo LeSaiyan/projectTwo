@@ -3,6 +3,9 @@ import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 import Layout from "../../components/Layout"
 import { Link } from "gatsby"
+import IdentityModal, {
+  useIdentityContext,
+} from "react-netlify-identity-widget"
 
 export const query = graphql`
   query MyQuery {
@@ -23,6 +26,13 @@ export const query = graphql`
 `
 
 const Products = ({ data }) => {
+  const identity = useIdentityContext()
+  //state local
+  const [dialog, setDialog] = React.useState(false)
+
+  console.log(identity.user)
+
+  const isLoggedIn = identity && identity.isLoggedIn
   return (
     <Layout>
       <table>
@@ -33,9 +43,6 @@ const Products = ({ data }) => {
           <th>Preview</th>
         </tr>
         {data.allMarkdownRemark.edges.map(product => {
-          console.log(product)
-          console.log(product.node.frontmatter.path)
-
           return (
             <tr>
               <td>{product.node.frontmatter.title}</td>

@@ -14,7 +14,6 @@ const Index = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
-    console.log(inputForm)
     axios
       .post(
         `https://keen-yonath-4ea4f5.netlify.app/.netlify/functions/signup`,
